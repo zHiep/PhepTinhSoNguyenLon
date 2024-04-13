@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Số nguyên lớn</title>
+</head>
+<body>
+    <div id="main">
+        <div class="tab-container">
+            <button class="tab-button active" onclick="openTab(event, 'tab1')">Phép tính với số nguyên lớn</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Bài toán quản lý lương</button>
+        </div>
+    
+        <!-- tab phép tính -->
+        <div id="tab1" class="tab-content active">
+            <div class="content1">
+                <div>
+                    <label class="title-name">Nhập số thứ nhất:</label><br>
+                    <textarea class="input-number" style="width: 600px;height: 100px;" id="num1"></textarea><br>
+                    <label class="title-name">Nhập số thứ hai:</label><br>
+                    <textarea class="input-number" style="width: 600px;height: 100px;" id="num2"></textarea><br>
+                    <label id="ketqua" class="title-name">Kết quả:</label><br>
+                    <textarea class="input-number" disabled style="width: 600px;height: 100px;" id="result"></textarea>
+                </div>
+                <div class="divnut">
+                    <button id="btnnhan">Nhân hai số nguyên lớn</button><br>
+                    <button id="btnchia">Chia hai số nguyên lớn</button><br>
+                    <button id="btncong">Cộng hai số nguyên lớn</button><br>
+                    <button id="btntru">Trừ hai số nguyên lớn</button><br>
+                    <button id="btnrandom">Sinh số ngẫu nhiên</button><br>
+                    <button id="btnclear">Clear All</button><br>
+                </div>
+            </div>
+        </div>
+        
+        <!-- tab bài toán ứng dụng -->
+        <div id="tab2" class="tab-content">
+            <div class="content2">
+                <div id="collect">
+                    <form class="form">
+                      <table style="width: 800px; border: none;">
+                        <tr style="border: none; background-color:#fff;">
+                          <td><label for="macb">Mã cán bộ</label></td>
+                          <td><input class="input-cb" type="text" id="macb" name="macb" value="" /></td>
+                        </tr>
+                        <tr style="border: none; background-color:#fff;">
+                          <td><label for="name">Họ tên cán bộ</label></td>
+                          <td><input class="input-cb" type="text" id="name" name="name" value="" /></td>
+                        </tr>
+                        <tr style="border: none; background-color:#fff;">
+                          <td><label for="luong">Lương</label></td>
+                          <td><input class="input-cb" type="text" id="luong" name="luong" value="" /></td>
+                        </tr>
+                        <tr>
+                          <td><button class="custom-file-upload" id="btnSave">Thêm cán bộ</button></td>
+                          <td></td>
+                        </tr>
+                      </table>
+                    </form>
+                </div>
+                <div id="display">
+                    <p>
+                        <button class="btn" id="btnTBLuong" onclick="trungBinhLuong()">Tính tổng và trung bình lương</button>
+                        <label for="file" class="custom-file-upload">Chọn file CSV</label>
+                        <input type="file" id="file">
+                        <button class="btn" id="btnExport">Xuất file CSV</button>
+                        <button class="btn" id="clearTable">Xóa bảng</button>
+                    </p>
+                    <table id="table">
+                      <thead>
+                        <tr>
+                          <th>Ma can bo</th>
+                          <th>Ho ten can bo</th>
+                          <th>Luong</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Dữ liệu cán bộ-->
+                      </tbody>
+                    </table>
+                </div>
+                <div>
+                  <table style="margin-top: 50px; width: 800px; border: none;">
+                    <tr style="border: none; background-color:#fff;">
+                      <td><h3>Tổng lương</h3></td>
+                      <td><textarea disabled id="tongLuong" class="input-cb" type="text" value=""></textarea></td>
+                    </tr>
+                    <tr style="border: none; background-color:#fff;">
+                      <td><h3>Lương trung bình</h3></td>
+                      <td><textarea disabled id="tbLuong" class="input-cb" type="text" value=""></textarea></td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="./docfile.js"></script>
+<script src="./pheptinh.js"></script>
+<script type="module" src="./xuatfile.js"></script>
+</html>

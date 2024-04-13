@@ -1,0 +1,40 @@
+
+#main {
+  width: 1000px;
+  margin:0 auto;
+}
+
+#collect form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#collect form p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#display > p {
+  text-align: right;
+}
+
+#display table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 0.25rem 1rem;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #eee;
+}
+table th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: dodgerblue;
+  color: white;
+}
