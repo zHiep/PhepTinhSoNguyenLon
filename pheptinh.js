@@ -39,7 +39,9 @@ btnclear.onclick = function () {
     document.getElementById("result").value = '';
 }
 btnrandom.onclick = function () {
-    randomNumber(500,500);
+    var lengthNum1 = document.getElementById('select1').value ;
+    var lengthNum2 = document.getElementById('select2').value ;
+    randomNumber(lengthNum1,lengthNum2);
     document.getElementById("result").value = '';
     document.getElementById('ketqua').innerText = 'Kết quả :'
 }

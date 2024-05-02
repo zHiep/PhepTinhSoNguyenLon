@@ -5,6 +5,51 @@ body {
     background-color: #f4f4f4;
 }
 
+
+#select1 {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+#select1:hover {
+    background-color: #f9f9f9;
+}
+  
+#select1.input-cb {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#select2 {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+#select2:hover {
+    background-color: #f9f9f9;
+}
+  
+#select2.input-cb {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 .input-number {
     outline: none;
     border: #00a00d solid 1px; 

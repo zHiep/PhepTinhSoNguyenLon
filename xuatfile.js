@@ -30,6 +30,28 @@ const APP = {
         return; // Dừng xử lý tiếp theo nếu giá trị không phải là số
     }
 
+    // Kiểm tra mã cán bộ trùng lặp
+    // Lấy thẻ <table> bằng ID
+    var table = document.getElementById('table');
+
+    // Khởi tạo mảng để lưu trữ giá trị của cột "Ma can bo"
+    var maCanBoArray = [];
+
+    // Lặp qua các dòng trong tbody của bảng
+    for (var i = 0, row; row = table.rows[i]; i++) {
+        // Lấy giá trị của cột "Ma can bo" trong dòng hiện tại
+        var maCanBo = row.cells[0].innerHTML;
+        
+        // Thêm giá trị vào mảng
+        maCanBoArray.push(maCanBo);
+    }
+
+    if (maCanBoArray.indexOf(macbValue) !== -1) {
+      alert("Mã cán bộ này đã tồn tại!");
+      return;
+    }
+
+
     const form = ev.target;
     const formdata = new FormData(form);
     //lưu dữ liệu trong APP.data
